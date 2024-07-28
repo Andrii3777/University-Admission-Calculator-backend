@@ -403,13 +403,12 @@ The requireAuth middleware is used to protect the following routes:
 
 Error Responses:
 
-- **401 Unauthorized (No token):**
+- **401 Unauthorized:**
   ```json
   {
     "error": "Unauthorized. No token is found"
   }
   ```
-- **401 Unauthorized (Invalid token):**
   ```json
   {
     "error": "Unauthorized. Token is invalid"
