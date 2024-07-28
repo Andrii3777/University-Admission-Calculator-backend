@@ -48,8 +48,6 @@ An example `.env.example` file is provided at the root of the project. You can c
 ## Database
 Database for **University Admission Calculator** includes next tables:
 
-![database](https://github.com/user-attachments/assets/cdecded1-053b-4b5a-971c-1c2342cc6bf2)
-
 ### 1. student
 The student table stores information about the students. It includes the following fields:
 
@@ -174,7 +172,6 @@ POST `api/v1/signup`
     "path": "password"
   }
   ```
-  ![signup](https://github.com/user-attachments/assets/d204fb24-0c4a-454a-a827-b833a46cd75f)
 
 ### 2. Login
 
@@ -214,8 +211,6 @@ POST `api/v1/login`
     "path": "password"
   }
   ```
-  
-  ![login](https://github.com/user-attachments/assets/3347b216-f99b-4d75-8931-cedbf85f1272)
 
 ### 3. Logout
 
@@ -233,8 +228,6 @@ GET `api/v1/logout`
   "message": "Student logged out successfully"
 }
 ```
-
-![logout](https://github.com/user-attachments/assets/a55f349d-109a-4749-8dc2-e827942d699d)
 
 ### 4. Refresh Token
 
@@ -271,8 +264,6 @@ GET `api/v1/refresh`
     "error": "Student with such token is not found"
   }
   ```
-
-  ![refresh](https://github.com/user-attachments/assets/6da0001d-4884-4a03-8e21-de1cecaf0e41)
 
 ### 5. Enroll
 
@@ -338,7 +329,6 @@ POST `api/v1/enroll`
     "error": "<scoresValidation>"
   }
   ```
-  ![enroll](https://github.com/user-attachments/assets/35e85144-58b0-4bd9-a45c-ff1999d92a2a)
 
 ### 6. Get Student Scores
 
@@ -368,8 +358,6 @@ GET `api/v1/getStudentScores`
     "error": "Invalid Access Token"
   }
   ```
-
-  ![getStudentsScores](https://github.com/user-attachments/assets/b36a8290-fc6a-4f8b-bc0a-b69f136daa1e)
 
 ## Authentication
 The application uses **JSON Web Tokens** (JWT) for authentication. JWT is a compact, URL-safe means of representing claims to be transferred between two parties. It allows the application to verify the identity of users and provide secure access to protected resources.
@@ -403,19 +391,18 @@ The requireAuth middleware is used to protect the following routes:
 
 Error Responses:
 
-- **401 Unauthorized:**
+- **401 Unauthorized (No token):**
   ```json
   {
     "error": "Unauthorized. No token is found"
   }
   ```
+- **401 Unauthorized (Invalid token):**
   ```json
   {
     "error": "Unauthorized. Token is invalid"
   }
   ```
-
-  ![Authorization](https://github.com/user-attachments/assets/221527f5-6e45-4759-a35e-c56ac84123ea)
 
 ## Running the app with DOCKER
 ```bash
