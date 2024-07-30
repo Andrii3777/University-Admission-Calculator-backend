@@ -2,7 +2,6 @@ const tokenService = require('../services/tokenService.js');
 
 /**
  * Middleware to ensure the request is authenticated.
- * If the access token is missing or invalid, it attempts to refresh the token.
  */
 const requireAuth = async (req, res, next) => {
     try {
